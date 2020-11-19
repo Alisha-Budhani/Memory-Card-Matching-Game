@@ -1,0 +1,65 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box ;
+}
+
+body
+{
+    height: 100vh;
+    background: yellow;
+    background-size: cover;
+    display: flex;
+}
+
+.game-container
+{
+    width: 640px;
+    margin: auto;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.cards-block
+{
+    width: 24%;
+    height: 25%;
+    position: relative;
+    margin: 2px;
+    transform-style: preserve-3d;
+    transition: transform.5s;
+}
+
+/* we want to select the card block element that also has turn class */
+.cards-block.turn
+{
+    transform: rotateY(180deg);
+}
+
+.cards-block :active
+{
+    transform: scale(.97);
+}
+
+.front-card, .back-card
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid black;
+    backface-visibility: hidden;
+}
+
+.front-card
+{
+    transform: rotateY(180deg);
+}
+
+img
+{
+    width: 150px;
+    height: 200px;
+}

@@ -3,7 +3,7 @@ const box = document.querySelectorAll('.cards-block');
 var cardFlipped = false;
 var firstCard, secondCard;
 
-cardsShuffle()
+// cardsShuffle()
 
 //now we loop through all the cards which are stored on box
 box.forEach(card => card.addEventListener('click', turnCard));
@@ -31,13 +31,15 @@ function turnCard()
   
   }
 }
-
+var count = 0;
 function CardsMatch()
 {
   if(firstCard.dataset.match === secondCard.dataset.match)
   {
     firstCard.removeEventListener('click',turnCard);
     secondCard.removeEventListener('click',turnCard);
+    count = count + 1;
+    console.log(count);
   }
   else
   {
@@ -54,4 +56,15 @@ function cardsShuffle()
       let position  = Math.floor(Math.random() * 16);
       card.style.order = position;
     });
+    alert("Cards are shuffled");
+}
+
+function startMsg()
+{
+  alert("click on shuffle card button to start the Game");
+}
+
+function myFunction() {
+
+  alert("Congratulations, You won the game");
 }

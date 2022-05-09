@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="Game.css">
 </head>
 <body>
+    <div class="header">
+        <h1>Memory Card<br>Matching Game...</h1>
+        <br>
+        <button onclick="startMsg()">Start</button>
+        <br><br>
+        <button onclick="cardsShuffle()">Shuffle cards</button>
+    </div>
     <section class="game-container">
-        <!-- <h1>Matching Card Memory Game</h1> -->
         <div class="cards-block" data-match="emoji1">
             <img class="front-card" src="images/emoji1.jpg">
             <img class="back-card" src="images/smile.jpg">
@@ -75,5 +81,6 @@
         </div>
     </section>
     <script src="Game.js"></script>
+    <!-- <div class="democlass">Congratualations<br>you won the Game</div> -->
 </body>
 </html>
